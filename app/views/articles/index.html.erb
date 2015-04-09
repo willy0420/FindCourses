@@ -1,0 +1,16 @@
+<h2>Courses</h2>
+
+<%= form_tag articles_path,method:"get" do%>
+	CourseName<%= text_field_tag :title%>
+	<%= submit_tag "search"%>
+	Teacher<%= text_field_tag :content1%>
+	<%= submit_tag "search"%>
+	TimeSchedule<%= text_field_tag :content2%>
+	<%= submit_tag "search"%>
+<%end%>
+
+<% @articles.each do|article|%>
+	<%= link_to article.title, article_path(article) %>
+	<%= link_to "rewrite", edit_article_path(article) %>
+	<%= link_to "delete", article_path(article), method: "delete" %>
+<%end%>

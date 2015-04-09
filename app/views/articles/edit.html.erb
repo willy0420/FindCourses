@@ -1,0 +1,10 @@
+<h1>Rewrite an article</h1>
+
+<%= form_for @article do|f|%>
+	<div>CourseName<%= f.text_field :title%></div>
+	<div>Teacher<%= f.text_area :content1%></div>
+	<div>TimeSchedule<%= f.text_area :content2%></div>
+	<div>Credit<%= f.text_area :content3%></div>
+	<div>Classroom<%= f.text_area :content4%></div>
+	<%= f.submit%>
+<%end%>
